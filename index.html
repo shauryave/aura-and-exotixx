@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Aura Exotixx | Luxury Noir</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,35 +16,36 @@
       }
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #050505;
+        background-color: #000000;
         color: #ffffff;
+        overflow-x: hidden;
+        -webkit-tap-highlight-color: transparent;
       }
       h1, h2, h3, .font-serif {
         font-family: 'Playfair Display', serif;
       }
-      .neon-purple-glow {
-        box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
-      }
-      .neon-green-glow {
-        box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
-      }
       .glass-card {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(10, 10, 10, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
       }
-      ::-webkit-scrollbar {
-        width: 8px;
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
       }
-      ::-webkit-scrollbar-track {
-        background: #000;
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
       }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(168, 85, 247, 0.2);
         border-radius: 10px;
       }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #444;
+      input, textarea, button {
+        font-family: inherit;
+      }
+      /* Prevent elastic bounce on iOS while maintaining smooth scroll */
+      .overscroll-none {
+        overscroll-behavior: none;
       }
     </style>
     <script type="importmap">
